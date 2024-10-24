@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash To Trash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="player"></div>
+        <div id="mission-box">
+            <div id="mission">
+                <p>Mission: <span id="mission-text">Collect 0/5 Trash Items</span></p>
+                <p>Coins: <span id="coin-count">0</span> 💰</p>
+                <div id="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Three dots menu in top right corner -->
+        <div id="three-dots-menu">
+            <span id="menu-button">...</span>
+            <div id="menu-options" style="display: none;">
+                <button id="info-button">Information 📚</button>
+                <button id="characters-button">Characters 👤</button>
+                <button id="shop-button">Shop 🛒</button>
+            </div>
+        </div>
+
+        <!-- Info Modal -->
+        <div id="info-modal">
+            <div id="info-content" class="modal-content">
+                <span id="close-info" class="close-button">Close</span>
+                <h2>🌊 Welcome to the Ocean Cleanup Game! 🌊</h2>
+                <p>Use the arrow keys to move and collect trash! 🚮</p>
+                <p>Complete missions to earn coins and level up! 🌟</p>
+                <h3>About Our Planet 🌍</h3>
+                <p>The Earth is changing due to pollution caused by plastic waste, industrial emissions, and other harmful materials. Oceans are particularly affected, with millions of tons of plastic entering them every year, harming marine life and ecosystems.</p>
+                <h3>What Pollutes Our Oceans? 🌊</h3>
+                <p>Common pollutants include:</p>
+                <ul>
+                    <li>Plastic bags and bottles</li>
+                    <li>Fishing gear 🎣</li>
+                    <li>Chemicals from industrial runoff</li>
+                    <li>Sewage and agricultural waste 🚯</li>
+                </ul>
+                <h3>How Can We Save Our Planet? 🌱</h3>
+                <p>We can all contribute to saving our planet by:</p>
+                <ul>
+                    <li>Reducing plastic use and opting for reusable products.</li>
+                    <li>Participating in local clean-up events.</li>
+                    <li>Educating others about the importance of keeping our oceans clean.</li>
+                    <li>Supporting legislation that protects marine environments.</li>
+                </ul>
+                <h3>How This Game Helps 🕹️</h3>
+                <p>This game not only provides fun and engagement but also raises awareness about ocean pollution and encourages players to take action. By collecting trash in the game, you are reminded of the importance of keeping our oceans clean and the impact of pollution on marine life.</p>
+            </div>
+        </div>
+
+        <!-- Shop Modal -->
+        <div id="shop-modal">
+            <div id="shop-content" class="modal-content">
+                <span id="close-shop" class="close-button">Close</span> <!-- Close button for Shop -->
+                <h2>Shop 🛒</h2>
+                <div class="shop-item">
+                    <img src="player2.png" alt="Shin-Chan" class="shop-character">
+                    <p>Shin-Chan</p>
+                    <p>Price: 5000 Coins</p>
+                    <button id="buy-shinchan">Buy Shin-Chan</button>
+                </div>
+                <div class="shop-item">
+                    <img src="player3.png" alt="Barbie" class="shop-character">
+                    <p>Barbie</p>
+                    <p>Price: 3500 Coins</p>
+                    <button id="buy-barbie">Buy Barbie</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Characters Modal -->
+        <div id="characters-modal">
+            <div id="characters-content" class="modal-content">
+                <span id="close-characters" class="close-button">Close</span> <!-- Close button for Characters -->
+                <h2>Available Characters 👤</h2>
+                <!-- Default Character -->
+                <div class="character-item">
+                    <img src="player.png" alt="Superman" class="character-img">
+                    <p>Name: Superman</p>
+                    <button id="equip-superman">Equip Superman</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- On-Screen Controls -->
+        <div id="controls">
+            <button id="left-button">⬅️</button>
+            <button id="up-button">⬆️</button>
+            <button id="down-button">⬇️</button>
+            <button id="right-button">➡️</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

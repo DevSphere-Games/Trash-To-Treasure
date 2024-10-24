@@ -1,0 +1,252 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('ocean-background.jpg'); /* Background image */
+  background-size: cover; /* Ensure the image covers the entire container */
+  overflow: hidden;
+}
+
+/* Player */
+#player {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('player.png');
+  background-size: cover;
+  z-index: 3;
+}
+
+/* Trash Items */
+.trash {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/* Mission Box */
+#mission-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 4;
+  width: 220px;
+  text-align: center;
+  border: 2px solid #007BFF; /* Border color */
+}
+
+/* Progress Bar */
+#progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: green;
+  border-radius: 10px;
+}
+
+/* Three dots menu */
+#three-dots-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 4;
+}
+
+#menu-button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#menu-button:hover {
+  background-color: #0056b3;
+}
+
+#menu-options {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#menu-options button {
+  padding: 10px;
+  background-color: white;
+  color: #007BFF;
+  border: none;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+#menu-options button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show menu options when button is clicked */
+#menu-button:active + #menu-options {
+  display: block;
+}
+
+/* Modal Styling for Info, Shop, and Characters */
+#info-modal, #shop-modal, #characters-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+  z-index: 5;
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: #fff; /* White background for modal content */
+  margin: 10% auto;
+  padding: 20px;
+  width: 60%;
+  max-height: 70%;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative; /* Position relative for close button */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+/* Shop Content */
+#shop-content {
+  text-align: center;
+}
+
+.shop-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #007BFF;
+  margin: 10px 0;
+}
+
+.shop-character {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Character Modal */
+#characters-content {
+  text-align: center;
+}
+
+.character-item {
+  margin: 20px 0;
+}
+
+.character-img {
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Emoji Styles */
+h2, h3 {
+  color: #007BFF; /* Headings color */
+}
+
+/* Optional styling for the scroll indicator (if needed) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* On-Screen Controls */
+#controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#controls button {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: #0056b3;
+}
